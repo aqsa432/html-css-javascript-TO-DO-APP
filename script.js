@@ -43,3 +43,23 @@ function editToDo(item) {
         item.parentElement.replaceChild(input, item.previousElementSibling)
     }
 }
+// JavaScript functions for handling button actions
+
+function markAsComplete(button) {
+    // Get the parent list item of the clicked button
+    const listItem = button.parentElement;
+    
+    // Add a class to mark the task as complete (you can define this class in your CSS)
+    listItem.classList.add("completed");
+    
+    // Disable the "Complete" button
+    button.disabled = true;
+}
+
+function deleteTask(button) {
+    // Get the parent list item of the clicked button
+    const listItem = button.parentElement;
+    
+    // Remove the list item from the list
+    listItem.remove();
+}
